@@ -7,13 +7,13 @@ links() {
     echo "$line" >/tmp/line
     case "$line" in
     "##"*)
-      echo "</ul>"
-      echo -e "$line</h2>" | sed 's/## /<h2>/g'
-      echo "<ul>"
+      echo "\t\t</ul>"
+      echo -e "\t\t$line</h2>" | sed 's/## /<h2>/g'
+      echo "\t\t<ul>"
       ;;
-    "#"*) echo -e "<main>\n$line</h1>" | sed 's/# /<h1>/g' ;; # h1 is used at the beginning of a markdown file (<main> section)
+    "#"*) echo -e "<body>\n\t<main>\n$line</h1>" | sed 's/# /<h1>/g' ;; # h1 is used at the beginning of a markdown file (<main> section)
     "["*)
-      echo -n -e '\t<li><a href="'
+      echo -n -e '\t\t\t<li><a href="'
       echo -n $(awk -F"(" '{print $2}' /tmp/line | sed 's/.$//')
       echo -n '">'
       echo -n $(awk -F"[" '{print $2}' /tmp/line | sed 's/].*//')
