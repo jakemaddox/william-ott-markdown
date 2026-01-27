@@ -53,7 +53,7 @@ jobs:
               ;;
             *) echo "$line" ;;
             esac
-          done <src/links.md >/tmp/index.html
+          done <markdown/links.md >/tmp/index.html
           echo "</ul>" >>/tmp/index.html
           sed "0,/<\/ul>/s/<\/ul>//" /tmp/index.html >links/index.html
 
@@ -69,4 +69,4 @@ jobs:
               ;;
             *) echo "$line" ;;
             esac
-          done <src/links.md >links/index.gmi
+          done <markdown/links.md >links/index.gmi
