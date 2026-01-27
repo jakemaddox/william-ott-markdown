@@ -1,6 +1,6 @@
 #!/bin/sh
 links() {
-  mkdir -p links
+  mkdir -p _site/links
 
   # HTML
   while IFS= read -r line; do
@@ -21,9 +21,9 @@ links() {
       ;;
     *) echo "$line" ;;
     esac
-  done <src/links.md >/tmp/index.html
+  done <markdown/links.md >/tmp/index.html
   echo "</ul>" >>/tmp/index.html
-  sed "0,/<\/ul>/s/<\/ul>//" /tmp/index.html >links/index.html
+  sed "0,/<\/ul>/s/<\/ul>//" /tmp/index.html >_site/links/index.html
 
   # Gemini
   while IFS= read -r line; do
@@ -37,7 +37,7 @@ links() {
       ;;
     *) echo "$line" ;;
     esac
-  done <src/links.md >links/index.gmi
+  done <markdown/links.md >_site/links/index.gmi
 }
 
 links
