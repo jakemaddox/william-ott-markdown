@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 links() {
   mkdir -p _site/links
 
