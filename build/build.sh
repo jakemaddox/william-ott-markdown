@@ -7,9 +7,9 @@ links() {
     echo "$line" >/tmp/line
     case "$line" in
     "##"*)
-      echo "\t\t</ul>"
+      echo -e "\t\t</ul>"
       echo -e "\t\t$line</h2>" | sed 's/## /<h2>/g'
-      echo "\t\t<ul>"
+      echo -e "\t\t<ul>"
       ;;
     "#"*) echo -e "<body>\n\t<main>\n$line</h1>" | sed 's/# /<h1>/g' ;; # h1 is used at the beginning of a markdown file (<main> section)
     "["*)
@@ -23,7 +23,7 @@ links() {
     esac
   done <markdown/links.md >/tmp/index.html
   echo -e "</ul>\n</main>\n</body>" >>/tmp/index.html
-  sed "0,/<\/ul>/s/<\/ul>//" /tmp/index.html >_site/links/index.html
+  sed "0,/\t\t<\/ul>/s/\t\t<\/ul>//" /tmp/index.html >_site/links/index.html
 
   # Gemini
   while IFS= read -r line; do
