@@ -83,7 +83,7 @@ jobs:
         run: touch ./_site/index.html; touch ./index.html
 
       - name: ls-test-2
-        run: ls
+        run: ls; echo -e "\nContents of _site:"; ls _site
 
   deploy:
     environment:
