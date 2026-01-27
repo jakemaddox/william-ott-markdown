@@ -35,6 +35,7 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
 
       # Runs a set of commands using the runners shell
+      - name: ls-test
         run: ls
         
       - name: links
