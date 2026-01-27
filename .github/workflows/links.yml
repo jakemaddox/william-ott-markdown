@@ -40,7 +40,7 @@ jobs:
         
       - name: links
         run: |
-          mkdir -p links
+          mkdir _site/links
 
           # HTML
           while IFS= read -r line; do
@@ -63,7 +63,7 @@ jobs:
             esac
           done <markdown/links.md >/tmp/index.html
           echo "</ul>" >>/tmp/index.html
-          sed "0,/<\/ul>/s/<\/ul>//" /tmp/index.html >links/index.html
+          sed "0,/<\/ul>/s/<\/ul>//" /tmp/index.html >_site/links/index.html
 
           # Gemini
           while IFS= read -r line; do
@@ -77,7 +77,7 @@ jobs:
               ;;
             *) echo "$line" ;;
             esac
-          done <markdown/links.md >links/index.gmi
+          done <markdown/links.md >_site/links/index.gmi
 
       - name: create test index.html file
         run: echo "If you are reading this, links.yml worked!" > index.html
