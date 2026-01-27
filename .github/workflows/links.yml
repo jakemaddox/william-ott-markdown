@@ -80,7 +80,10 @@ jobs:
           done <markdown/links.md >links/index.gmi
 
       - name: create test index.html file
-        run: touch ./_site/index.html
+        run: touch ./_site/index.html; touch ./index.html
+
+      - name: ls-test-2
+        run: ls
 
   deploy:
     environment:
