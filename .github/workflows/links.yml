@@ -40,7 +40,7 @@ jobs:
         
       - name: links
         run: |
-          mkdir _site/links
+          mkdir -p _site/links
 
           # HTML
           while IFS= read -r line; do
