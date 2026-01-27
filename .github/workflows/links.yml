@@ -77,7 +77,7 @@ jobs:
           done <markdown/links.md >links/index.gmi
 
       - name: create test index.html file
-        run: touch ./index.html
+        run: touch ./_site/index.html
 
   deploy:
     environment:
