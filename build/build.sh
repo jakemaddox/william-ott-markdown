@@ -3,6 +3,10 @@ links() {
   mkdir -p _site/links
 
   # HTML
+
+  echo "<body>"
+
+  # This while loop converts Markdown to HTML.
   while IFS= read -r line; do
     echo "$line" >/tmp/line
     case "$line" in
@@ -11,7 +15,7 @@ links() {
       echo -e "\t\t$line</h2>" | sed 's/## /<h2>/g'
       echo -e "\t\t<ul>"
       ;;
-    "#"*) echo -e "<body>\n\t<main>\n\t\t$line</h1>" | sed 's/# /<h1>/g' ;; # h1 is used at the beginning of a markdown file (<main> section)
+    "#"*) echo -e "\t<main>\n\t\t$line</h1>" | sed 's/# /<h1>/g' ;; # h1 is used at the beginning of a markdown file (<main> section)
     "["*)
       echo -n -e '\t\t\t<li><a href="'
       echo -n $(awk -F"(" '{print $2}' /tmp/line | sed 's/.$//')
