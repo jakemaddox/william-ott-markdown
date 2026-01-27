@@ -38,6 +38,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Build everything
         run: build/build.sh
+        run: touch ./index.html
         
   deploy:
     environment:
