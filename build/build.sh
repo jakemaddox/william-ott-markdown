@@ -11,7 +11,7 @@ links() {
       echo -e "$line</h2>" | sed 's/## /<h2>/g'
       echo "<ul>"
       ;;
-    "#"*) echo "$line</h1>" | sed 's/# /<h1>/g' ;;
+    "#"*) echo -e "<main>\n$line</h1>" | sed 's/# /<h1>/g' ;; # h1 is used at the beginning of a markdown file (<main> section)
     "["*)
       echo -n -e '\t<li><a href="'
       echo -n $(awk -F"(" '{print $2}' /tmp/line | sed 's/.$//')
@@ -22,7 +22,7 @@ links() {
     *) echo "$line" ;;
     esac
   done <markdown/links.md >/tmp/index.html
-  echo "</ul>" >>/tmp/index.html
+  echo -e "</ul>\n</main>\n</body>" >>/tmp/index.html
   sed "0,/<\/ul>/s/<\/ul>//" /tmp/index.html >_site/links/index.html
 
   # Gemini
