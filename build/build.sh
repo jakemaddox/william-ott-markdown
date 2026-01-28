@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ./nav.sh
+source build/nav.sh
 
 links() {
   mkdir -p _site/links
