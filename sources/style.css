@@ -22,6 +22,7 @@ a:hover {
 }
 
 header {
+	background-color: #EEE;
 	font-size: 150%;
 	line-height: 1.3;
 	text-align: center;
@@ -44,4 +45,5 @@ main {
 
 @media (prefers-color-scheme: dark) {
 	body { background-color: black; color: white; }
+	header { background-color: #111 }
 }
