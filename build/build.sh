@@ -7,9 +7,9 @@ links() {
 
   # HTML
 
-  echo "<body>"
+  echo "<body>" > links/index.html
 
-  nav
+  nav | sed 's/^/  /' >> links/index.html
   
   # This while loop converts Markdown to HTML.
   while IFS= read -r line; do
