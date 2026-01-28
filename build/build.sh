@@ -9,7 +9,7 @@ links() {
 
   echo "<body>"
 
-  nav | sed 's/^/  /'
+  nav
   
   # This while loop converts Markdown to HTML.
   while IFS= read -r line; do
@@ -31,7 +31,7 @@ links() {
     *) echo "$line" ;;
     esac
   done < sources/links.md > /tmp/index.html
-  echo -e "</ul>\n</main>\n</body>" >>/tmp/index.html
+  echo -e "\t\t</ul>\n\t</main>\n</body>" >>/tmp/index.html
   sed "0,/\t\t<\/ul>/s/\t\t<\/ul>//" /tmp/index.html >_site/links/index.html # remove first </ul>
 
   # Gemini
