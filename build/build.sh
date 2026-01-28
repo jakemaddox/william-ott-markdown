@@ -7,8 +7,8 @@ links() {
   mkdir -p _site/links
 
   # HTML
-
-  echo "<body>" > _site/links/index.html
+  cat sources/head.html > _site/links/index.html
+  echo "<body>" >> _site/links/index.html
 
   nav | sed 's/^/  /' >> _site/links/index.html
   
