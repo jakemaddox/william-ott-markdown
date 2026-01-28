@@ -1,6 +1,7 @@
 #!/bin/bash
 
 source build/nav.sh
+cp sources/index.gmi _site
 
 links() {
   mkdir -p _site/links
