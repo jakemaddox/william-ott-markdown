@@ -30,6 +30,7 @@ header {
 }
 
 nav {
+	background-color: #EEE
 	text-align: center;
 	top: 58px;
 }
@@ -45,5 +46,5 @@ main {
 
 @media (prefers-color-scheme: dark) {
 	body { background-color: black; color: white; }
-	header { background-color: #111 }
+	header, nav { background-color: #111 }
 }
