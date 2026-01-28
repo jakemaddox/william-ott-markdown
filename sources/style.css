@@ -1,0 +1,43 @@
+body {
+    font-size: 175%;
+    line-height: 1.6;
+    width: 100%;
+    height: 100%;
+    margin: 0 0 100px;
+    text-align: justify;
+}
+
+ul, ol {
+    display: table;
+    margin: 0 auto;
+}
+
+a { 
+    color: #C8102E;
+    text-decoration: none;
+} /* UH red */
+
+a:hover {
+    color: #960C22;
+}
+
+header {
+	font-size: 150%;
+	line-height: 1.3;
+	text-align: center;
+	top: 0;
+}
+
+nav {
+	text-align: center;
+	top: 58px;
+}
+
+h1, h2 {
+	text-align: center;
+}
+
+main {
+	margin: auto;
+	max-width: 1200px;
+}
