@@ -8,9 +8,9 @@ links() {
 
   # HTML
   echo -e "<head>\n\t<title>$(grep '# ' sources/links.md | sed 's/# //')</title>\n<head>" > _site/links/index.html
-  echo -e "\t<style>"
+  echo -e "\t<style>" >> _site/links/index.html
   cat sources/style.css >> _site/links/index.html | sed 's/^/  /'
-  echo -e "\t</style>"
+  echo -e "\t</style>" >> _site/links/index.html
   echo "<body>" >> _site/links/index.html
 
   nav | sed 's/^/  /' >> _site/links/index.html
