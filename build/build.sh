@@ -30,9 +30,9 @@ links() {
       ;;
     *) echo "$line" ;;
     esac
-  done < sources/links.md >> /tmp/index.html
+  done < sources/links.md > /tmp/index.html
   echo -e "\t\t</ul>\n\t</main>\n</body>" >> /tmp/index.html
-  sed "0,/\t\t<\/ul>/s/\t\t<\/ul>//" /tmp/index.html > _site/links/index.html # remove first </ul>
+  sed "0,/\t\t<\/ul>/s/\t\t<\/ul>//" /tmp/index.html >> _site/links/index.html # remove first </ul>
 
   # Gemini
   while IFS= read -r line; do
