@@ -8,7 +8,9 @@ links() {
 
   # HTML
   echo -e "<head>\n\t<title>$(grep '# ' sources/links.md | sed 's/# //')</title>\n<head>" > _site/links/index.html
-  cat sources/style.css >> _site/links/index.html
+  echo -e "\t<style>"
+  cat sources/style.css >> _site/links/index.html | sed 's/^/  /'
+  echo -e "\t</style>"
   echo "<body>" >> _site/links/index.html
 
   nav | sed 's/^/  /' >> _site/links/index.html
@@ -19,10 +21,10 @@ links() {
     case "$line" in
     "##"*)
       echo -e "\t\t</ul>"
-      echo -e "\t\t$line</h2>" | sed 's/## /<h2>/g'
+      echo -e "\t\t$line</h2>" | sed 's/## /<h2>/'
       echo -e "\t\t<ul>"
       ;;
-    "#"*) echo -e "\t<main>\n\t\t$line</h1>" | sed 's/# /<h1>/g' ;; # h1 is used at the beginning of a markdown file (<main> section)
+    "#"*) echo -e "\t<main>\n\t\t$line</h1>" | sed 's/# /<h1>/' ;; # h1 is used at the beginning of a markdown file (<main> section)
     "["*)
       echo -n -e '\t\t\t<li><a href="'
       echo -n $(awk -F"(" '{print $2}' /tmp/line | sed 's/.$//')
