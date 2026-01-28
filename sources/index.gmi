@@ -1,0 +1,14 @@
+# William Ott
+
+=> research/ Research
+=> teaching/ Teaching
+=> publications/ Publications
+=> students/ Students
+=> links/ Links
+
+## Coordinates
+=> http://www.math.uh.edu/ Department of Mathematics
+=> http://uh.edu/ University of Houston
+
+Office: 603 PGH
+=> ott@math.uh.edu
