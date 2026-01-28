@@ -1,21 +1,6 @@
 #!/bin/bash
 
-nav() {
-  while IFS= read -r line; do
-    case $line in
-    "##"*) break ;;
-    "#"*) echo -e "$line</header>\n<nav>" | sed 's/# /<header>/g' ;;
-    "=>"*)
-      echo -e -n "\t" # indent
-      echo -n "$line" | sed 's/=> /<a href="/g' | sed 's/\t/">/g'
-      echo "</a>"
-      ;;
-    *) continue ;;
-    esac
-  done <sources/index.gmi
-
-  echo "</nav>"
-}
+source ./nav.sh
 
 links() {
   mkdir -p _site/links
@@ -45,7 +30,7 @@ links() {
       ;;
     *) echo "$line" ;;
     esac
-  done < markdown/links.md > /tmp/index.html
+  done < sources/links.md > /tmp/index.html
   echo -e "</ul>\n</main>\n</body>" >>/tmp/index.html
   sed "0,/\t\t<\/ul>/s/\t\t<\/ul>//" /tmp/index.html >_site/links/index.html # remove first </ul>
 
@@ -61,7 +46,7 @@ links() {
       ;;
     *) echo "$line" ;;
     esac
-  done <markdown/links.md >_site/links/index.gmi
+  done < sources/links.md > _site/links/index.gmi
 }
 
 links
