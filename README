@@ -4,6 +4,8 @@
 | |/ |/ // // // // // /_/ // / / / / /  / /_/ // /_ / /_
 |__/|__//_//_//_//_/ \__,_//_/ /_/ /_/   \____/ \__/ \__/
 
-This repository contains Markdown files which are converted to HTML through .github/workflows/links.yml and shell scripts in the build/ directory.
+This repository contains Markdown files which are converted to HTML through shell scripts in the build/ directory and deployed to GitHub Pages through [insert here].
 
 These scripts also contain code for Gemini sites (https://geminiprotocol.net). Note that GitHub Pages does not currently support it.
+
+The index.gmi file contains links for the navigation bar and coordinates for the footer.
