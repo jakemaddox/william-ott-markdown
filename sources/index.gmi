@@ -1,10 +1,10 @@
 # William Ott
 
-=> /research/	Research
-=> /teaching/	Teaching
-=> /publications/	Publications
-=> /students/	Students
-=> /links/	Links
+=> ../research/	Research
+=> ../teaching/	Teaching
+=> ../publications/	Publications
+=> ../students/	Students
+=> ../links/	Links
 
 ## Coordinates
 => http://www.math.uh.edu/ Department of Mathematics
