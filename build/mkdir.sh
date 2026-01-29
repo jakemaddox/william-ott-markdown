@@ -1,1 +1,1 @@
-mkdir -p _site/links
+mkdir -p _site/{research,teaching,publications,students,links}
