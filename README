@@ -4,7 +4,7 @@
 | |/ |/ // // // // // /_/ // / / / / /  / /_/ // /_ / /_
 |__/|__//_//_//_//_/ \__,_//_/ /_/ /_/   \____/ \__/ \__/
 
-This repository contains Markdown files which are converted to HTML through shell scripts in the build/ directory and deployed to GitHub Pages through [insert here].
+This repository contains Markdown files which are converted to HTML through shell scripts in the build/ directory, and deployed to GitHub Pages through .github/workflows/build.yml.
 
 These scripts also contain code for Gemini sites (https://geminiprotocol.net). Note that GitHub Pages does not currently support it.
 
