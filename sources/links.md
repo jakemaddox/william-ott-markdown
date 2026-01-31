@@ -7,8 +7,8 @@
 
 ## Presentations
 
-[Delay-induced uncertainty](docs/delay-induced-uncertainty-v1.pdf)
-[Effects of projections on fractal sets and measures](docs/inference-Hausdorff-dimension-v1.pdf)
+[Delay-induced uncertainty](../docs/delay-induced-uncertainty-v1.pdf)
+[Effects of projections on fractal sets and measures](../docs/inference-Hausdorff-dimension-v1.pdf)
 
 ## Random
 
