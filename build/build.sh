@@ -2,7 +2,7 @@
 
 source build/nav.sh
 cp sources/index.gmi _site
-cp -r docs _site
+cp -r {docs,font} _site
 
 links() {
   mkdir -p _site/links
