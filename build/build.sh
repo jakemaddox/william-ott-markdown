@@ -10,7 +10,7 @@ links() {
   # HTML
   echo -e "<head>\n\t<title>$(grep '# ' sources/links.md | sed 's/# //')</title>\n<head>"
   echo '<meta name="viewport" content="width=device-width, initial-scale=1.0">'
-  echo '<link rel="stylesheet" href="font/cantarell.css">'
+  echo '<link rel="stylesheet" href="../font/cantarell.css">'
   echo -e "\t<style>"
   cat sources/style.css | sed 's/^/  /'
   echo -e "\t</style>"
